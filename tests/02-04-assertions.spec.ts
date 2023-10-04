@@ -5,7 +5,7 @@ const isSortedAsc = (arr) =>
 const isSortedDesc = (arr) =>
   arr.every((element, index, array) => !index || +array[index - 1] >= +element);
 
-test.describe("actions and assertions", () => {
+test.describe("actions and assertions @ci", () => {
   test("product catalog is properly sorted", async ({ page }) => {
     await page.goto("/");
 

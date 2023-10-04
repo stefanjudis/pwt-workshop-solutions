@@ -24,7 +24,7 @@ const validateCartTotal = async (page) => {
   });
 };
 
-test.describe("actions and assertions", () => {
+test.describe("actions and assertions @ci", () => {
   test("add products and validate cart", async ({ page }) => {
     await page.goto("/");
 

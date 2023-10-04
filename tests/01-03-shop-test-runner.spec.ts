@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
 
-test.describe("use the test runner", () => {
+test.describe("use the test runner @ci", () => {
   test("test-runner: add two home products to cart", async ({
     page,
   }, testInfo) => {

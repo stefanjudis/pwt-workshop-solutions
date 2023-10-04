@@ -1,6 +1,6 @@
 import { test } from "@playwright/test";
 
-test.describe("learn how to record", () => {
+test.describe("learn how to record @ci", () => {
   test("recording: add two home products to cart", async ({ page }) => {
     await page.goto("/");
     await page

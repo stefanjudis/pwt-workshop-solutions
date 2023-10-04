@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 
-test.describe("actions and assertions", () => {
+test.describe("actions and assertions @ci", () => {
   test("log into the shop", async ({ page }) => {
     await page.goto("/");
     await page.getByRole("link", { name: "Login" }).click();
