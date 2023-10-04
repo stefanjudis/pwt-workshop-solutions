@@ -7,6 +7,29 @@ const isSortedDesc = (arr) =>
   arr.every((element, index, array) => !index || +array[index - 1] >= +element);
 
 test.describe("shop", () => {
+  // 👉 /lessons/basics/02-recording/
+  test("add home product to cart", async ({ page }) => {
+    await page.goto("https://pwt-workshop-store.vercel.app/");
+    await page
+      .getByTestId("hero-product-grid")
+      .getByRole("link", {
+        name: "The Collection Snowboard: Liquid The Collection Snowboard: Liquid 749.95EUR",
+      })
+      .click();
+    await page.getByLabel("Add item to cart").click();
+    await page.getByLabel("Close cart").click();
+    await page
+      .getByRole("navigation")
+      .getByRole("link", { name: "PWT Workshop logo PWT Workshop" })
+      .click();
+    await page
+      .getByRole("link", {
+        name: "The Multi-managed Snowboard The Multi-managed Snowboard 629.95EUR",
+      })
+      .click();
+    await page.getByLabel("Add item to cart").click();
+  });
+
   test("mock news on home", async ({ page }) => {
     await page.route("/api/news/", (route) =>
       route.fulfill({
