@@ -27,7 +27,11 @@ test.describe("actions and assertions @ci", () => {
         .getByRole("navigation")
         .getByRole("link", { name: "PWT Workshop logo PWT Workshop" })
         .click();
-      await page.getByRole("link").nth(1).click();
+      await page
+        .getByTestId("hero-product-grid")
+        .getByRole("link")
+        .nth(1)
+        .click();
       await page.getByLabel("Add item to cart").click();
       await page.getByLabel("Close cart").click();
     });
