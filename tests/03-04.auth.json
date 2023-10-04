@@ -1,0 +1,15 @@
+{
+  "cookies": [
+    {
+      "name": "name",
+      "value": "stefan",
+      "domain": "pwt-workshop-store.vercel.app",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": []
+}

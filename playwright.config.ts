@@ -46,6 +46,16 @@ export default defineConfig({
       name: "api",
       testMatch: "*.api.spec.ts",
     },
+
+    {
+      name: "setup",
+      testMatch: "*.setup.ts",
+    },
+    {
+      dependencies: ["setup"],
+      name: "storageState",
+      testMatch: "*.with-state.spec.ts",
+    },
   ],
 
   /* Run your local dev server before starting the tests */
