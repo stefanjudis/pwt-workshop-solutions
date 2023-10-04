@@ -11,7 +11,7 @@ test.describe("network", async () => {
     await page.goto("/", { waitUntil: "networkidle" });
     await page
       .getByTestId("newsbox")
-      .screenshot({ path: "mocked-newsbox.png" });
+      .screenshot({ path: "./screenshots/mocked-newsbox.png" });
   });
 
   test("block all shopify requests", async ({ page }) => {
