@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("end boss", async () => {
   test.setTimeout(90_000);
 
-  test.only("make an order", async ({ page }, testInfo) => {
+  test("make an order", async ({ page }, testInfo) => {
     await page.goto("/");
 
     await page

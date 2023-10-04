@@ -8,7 +8,7 @@ function validateProduct(product) {
 }
 
 test.describe("API testing", async () => {
-  test.only("make requests", async ({ request }) => {
+  test("make requests", async ({ request }) => {
     const response = await request.get("/api/products/");
     expect(response).toBeOK();
 
@@ -18,4 +18,5 @@ test.describe("API testing", async () => {
       validateProduct(product);
     }
     expect(products.length).toBe(15);
+  });
 });
