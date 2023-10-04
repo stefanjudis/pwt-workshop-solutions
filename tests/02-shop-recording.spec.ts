@@ -1,7 +1,7 @@
 import { test } from "@playwright/test";
 
 test.describe("learn how to record", () => {
-  test("add two home products to cart", async ({ page }) => {
+  test("recording: add two home products to cart", async ({ page }) => {
     await page.goto("/");
     await page
       .getByTestId("hero-product-grid")
@@ -23,7 +23,7 @@ test.describe("learn how to record", () => {
     await page.getByLabel("Add item to cart").click();
   });
 
-  test("search for 'hydrogen' and add one product to cart", async ({
+  test("recording: search for 'hydrogen' and add one product to cart", async ({
     page,
   }) => {
     await page.goto("/");
