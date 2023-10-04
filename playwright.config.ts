@@ -60,6 +60,7 @@ export default defineConfig({
     {
       dependencies: ["setup"],
       name: "storageState",
+      use: { storageState: "auth.json" },
       testMatch: "*.with-state.spec.ts",
     },
   ],
