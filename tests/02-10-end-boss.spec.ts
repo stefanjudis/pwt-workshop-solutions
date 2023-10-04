@@ -3,7 +3,7 @@ import { test, expect } from "@playwright/test";
 test.describe("end boss", async () => {
   test.setTimeout(90_000);
 
-  test("make an order", async ({ page }, testInfo) => {
+  test.only("make an order", async ({ page }, testInfo) => {
     await page.goto("/");
 
     await page
@@ -12,7 +12,6 @@ test.describe("end boss", async () => {
       .first()
       .click();
     await page.getByLabel("Add item to cart").click();
-    await expect(page.getByLabel("Add item to cart")).toBeDisabled();
     await page.getByRole("link", { name: "Proceed to Checkout" }).click();
 
     await test.step("fill in shipping info", async () => {

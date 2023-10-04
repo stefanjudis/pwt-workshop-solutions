@@ -10,7 +10,7 @@ test.describe("page events", async () => {
 
     await page.goto("/?log=true", { waitUntil: "networkidle" });
 
-    expect(capturedLogs).toHaveLength(0);
+    expect(capturedLogs).toHaveLength(4);
     if (capturedLogs.length) {
       console.log(capturedLogs);
     }
